@@ -8,13 +8,6 @@ from ..model.loan import Loan
 from .repository import Repository
 
 class Database:
-<<<<<<< HEAD
-=======
-    """
-    Ponto de acesso central para a persistência.
-    Gerencia os repositórios para cada tipo de entidade e a geração de IDs.
-    """
->>>>>>> 75bb60ffe3e1caaf770e666cbdc24203ae440a4d
     def __init__(self):
         self._repositories: Dict[Type[Entity], Repository] = {
             Author: Repository(),
@@ -38,10 +31,6 @@ class Database:
         return repo
         
     def insert(self, entity: Entity) -> Entity:
-<<<<<<< HEAD
-=======
-        """Insere uma entidade, atribuindo um ID único e sequencial."""
->>>>>>> 75bb60ffe3e1caaf770e666cbdc24203ae440a4d
         entity_type = type(entity)
         next_id = self._id_counters[entity_type]
         entity.id = next_id

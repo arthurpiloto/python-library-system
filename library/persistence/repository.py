@@ -22,8 +22,4 @@ class Repository:
         if not self._data:
             return "No entities registered."
         sorted_items = sorted(self._data.values(), key=lambda e: e.id)
-<<<<<<< HEAD
         return "\n".join(str(entity) for entity in sorted_items)
-=======
-        return "\n".join(str(entity) for entity in sorted_items)
->>>>>>> 75bb60ffe3e1caaf770e666cbdc24203ae440a4d
