@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import List, Optional, TYPE_CHECKING
 from .entity import Entity
 from .genre import Genre
@@ -9,9 +11,6 @@ if TYPE_CHECKING:
 class Book(Entity):
     def __init__(self, id: int, title: str, author: Author, genre: Genre, total_copies: int):
         super().__init__(id)
-        if not (author, Author) or not (genre, Genre):
-            raise TypeError("Invalid type for author or genre.")
-        
         self.title = title
         self.author = author
         self.genre = genre

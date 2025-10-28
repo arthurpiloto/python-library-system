@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import List, TYPE_CHECKING
 from .person import Person
 from datetime import date
